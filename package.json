@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ghemingway/aipdate#readme",
   "dependencies": {
-    "date-fns": "^2.14.0",
+    "date-fns": "^2.15.0",
     "prettier": "^2.0.5"
   },
   "directories": {
