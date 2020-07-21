@@ -1,14 +1,14 @@
 {
   "name": "aip-date",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Dates of publication for AIP data",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ghemingway/aipdate.git"
+    "url": "git+https://github.com/ghemingway/aip-date.git"
   },
   "keywords": [
     "aip",
@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/ghemingway/aip-date#readme",
   "dependencies": {
-    "date-fns": "^2.15.0",
-    "moment": "^2.27.0",
-    "prettier": "^2.0.5"
+    "date-fns": "^2.15.0"
   },
   "directories": {
     "lib": "src"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5"
   }
 }
