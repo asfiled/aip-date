@@ -22,6 +22,8 @@ const dateFns = require("date-fns");
 ***/
 const dates = {
   us: new Date(Date.UTC(2019, 6, 18, 0, 0, 0)),
+  fr: new Date(Date.UTC(2021, 6, 17, 0, 0, 0)),
+  gb: new Date(Date.UTC(2021, 6, 17, 0, 0, 0)),
 };
 // Only allow up to 100 steps
 const MAXROLL = 100;

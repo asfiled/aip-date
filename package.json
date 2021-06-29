@@ -1,6 +1,6 @@
 {
   "name": "aip-date",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Dates of publication for AIP data",
   "main": "src/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "lib": "src"
   },
   "devDependencies": {
-    "mocha": "^8.0.1",
+    "mocha": "^9.0.1",
     "prettier": "^2.0.5"
   }
 }
