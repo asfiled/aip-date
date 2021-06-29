@@ -1,6 +1,6 @@
 {
   "name": "@asfiled/aip-date",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Dates of publication for AIP data",
   "main": "src/index.js",
   "scripts": {
