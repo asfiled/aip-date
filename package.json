@@ -1,15 +1,14 @@
 {
   "name": "aip-date",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Dates of publication for AIP data",
   "main": "src/index.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "mocha ./test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ghemingway/aip-date.git"
+    "url": "git+https://github.com/asfiled/aip-date.git"
   },
   "keywords": [
     "aip",
@@ -19,9 +18,12 @@
   "author": "G. Hemingway",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ghemingway/aip-date/issues"
+    "url": "https://github.com/asfiled/aip-date/issues"
   },
-  "homepage": "https://github.com/ghemingway/aip-date#readme",
+  "homepage": "https://github.com/asfiled/aip-date#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "date-fns": "^2.15.0"
   },
