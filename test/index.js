@@ -1,9 +1,9 @@
-/* Copyright G. Hemingway 2020 */
+/* Copyright @author: G. Hemingway 2023, All Rights Reserved */
 "use strict";
 
-const assert = require("assert");
-const { describe, it } = require("mocha");
-const aipDate = require("../src/index.js");
+import assert from "node:assert";
+import { describe, it } from "mocha";
+import aipDate from "../src/index.js";
 
 describe("AIP-Date Functions", () => {
   it("getDate - varying offset index", () => {
@@ -54,17 +54,17 @@ describe("AIP-Date Functions", () => {
 
   it("getDateAt - sample of dates", () => {
     assert.deepStrictEqual(
-        aipDate.getDateAt("5/22/2020"),
-        new Date(Date.parse("2020-05-21T00:00:00.000Z"))
+      aipDate.getDateAt("5/22/2020"),
+      new Date(Date.parse("2020-05-21T00:00:00.000Z"))
     );
     assert.deepStrictEqual(
-        aipDate.getDateAt("1/1/2020"),
-        new Date(Date.parse("2019-12-05T00:00:00.000Z"))
+      aipDate.getDateAt("1/1/2020"),
+      new Date(Date.parse("2019-12-05T00:00:00.000Z"))
     );
 
     assert.deepStrictEqual(
-        aipDate.getDateAt("8/3/2019"),
-        new Date(Date.parse("2019-07-18T00:00:00.000Z"))
+      aipDate.getDateAt("8/3/2019"),
+      new Date(Date.parse("2019-07-18T00:00:00.000Z"))
     );
   });
 
@@ -77,7 +77,7 @@ describe("AIP-Date Functions", () => {
       new Date(Date.parse("2020-07-16T00:00:00.000Z")),
       new Date(Date.parse("2020-08-13T00:00:00.000Z")),
       new Date(Date.parse("2020-09-10T00:00:00.000Z")),
-      new Date(Date.parse("2020-10-08T00:00:00.000Z"))
+      new Date(Date.parse("2020-10-08T00:00:00.000Z")),
     ]);
   });
 });

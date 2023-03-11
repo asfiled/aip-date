@@ -1,7 +1,7 @@
-/* Copyright G. Hemingway 2020 */
+/* Copyright @author: G. Hemingway 2023, All Rights Reserved */
 "use strict";
 
-const dateFns = require("date-fns");
+import dateFns from "date-fns";
 
 /*** Recent FAA publications dates
 2020-08-13 <--- next
@@ -63,10 +63,7 @@ const rollDate = (relDate, refDate, offset) => {
  * @param offset
  * @returns
  */
-const getDate = (module.exports.getDate = (
-  country = "us",
-  offset = 0
-) => {
+export const getDate = (country = "us", offset = 0) => {
   // Clean up params
   if (typeof country === "number" && offset === 0) {
     offset = country;
@@ -77,7 +74,7 @@ const getDate = (module.exports.getDate = (
   let relDate = new Date(Date.now());
   // Roll forward to at least now
   return rollDate(refDate, relDate, offset);
-});
+};
 
 /***
  *
@@ -86,11 +83,7 @@ const getDate = (module.exports.getDate = (
  * @param format
  * @returns {string}
  */
-module.exports.getDateStr = (
-  country = "us",
-  offset = 0,
-  format
-) => {
+export const getDateStr = (country = "us", offset = 0, format) => {
   let dateObj = getDate(country, offset);
   // Adjust for timezone offset
   const hours = dateObj.getTimezoneOffset() / 60;
@@ -105,11 +98,7 @@ module.exports.getDateStr = (
  * @param offset Cycles to offset - default: 0
  * @returns {Date}
  */
-module.exports.getDateAt = (
-    dateStr,
-    country = "us",
-    offset = 0,
-) => {
+export const getDateAt = (dateStr, country = "us", offset = 0) => {
   // Clean up params
   if (typeof country === "number" && offset === 0) {
     offset = country;
@@ -129,10 +118,18 @@ module.exports.getDateAt = (
  * @param back
  * @returns {[]}
  */
-module.exports.dateRange = (forward = 10, back = 0) => {
+export const dateRange = (forward = 10, back = 0) => {
   let dates = [];
   for (let i = -back; i < forward; i++) {
     dates.push(getDate(i));
   }
   return dates;
-}
+};
+
+export default {
+  rollDate,
+  dateRange,
+  getDateAt,
+  getDateStr,
+  getDate,
+};
